@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+:root {
+  --primary-color: #003147;
+  --secondary-color: #03a9f4;
+}
+
+body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: #fff;
+  max-width: 1000px;
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px #00000040;
+}
+
+/* Left Side (start) */
+.left_side {
+  background-color: var(--primary-color);
+  padding: 40px;
+  color: #fff;
+}
+
+/* About me section (start) */
+.about_me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff33;
+}
+
+.about_me img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.about_me h2,
+.about_me h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about_me h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.about_me h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+/* About me section (end) */
+
+.left_side .title {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* contact section (start) */
+.contact_info ul li {
+  list-style-type: none;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact_info ul li i {
+  color: var(--secondary-color);
+}
+/* contact info (end) */
+
+/* Education section (start) */
+.education li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.education h4 {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.education h5 {
+  font-weight: 300;
+}
+
+.education h5.degree {
+  font-weight: 500;
+}
+/* Education section (end) */
+
+/* Languages section (start) */
+.languages li {
+  list-style-type: none;
+  margin: 10px 0;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.languages .percent_container {
+  height: 6px;
+  margin-top: 5px;
+  background-color: #081921;
+}
+
+.languages .percent {
+  background-color: var(--secondary-color);
+  height: 100%;
+}
+/* Languages section (end) */
+
+/* Right Side (start) */
+.right_side {
+  padding: 40px;
+}
+
+.profile {
+  margin-bottom: 40px;
+}
+
+/* Experience section (start) */
+.experience {
+  margin-bottom: 40px;
+}
+
+.experience .box {
+  display: flex;
+  margin: 20px 0;
+}
+
+.experience .year_company {
+  min-width: 150px;
+}
+
+.experience .year_company h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: bold;
+}
+
+.experience .content h4 {
+  text-transform: uppercase;
+  color: #2a7da2;
+  font-style: 16px;
+}
+/* Experience section (end) */
+
+/* Skills section (start) */
+.skills {
+  margin-bottom: 40px;
+}
+
+.skill {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
+
+.skill h4 {
+  color: #848c90;
+  font-weight: 500;
+}
+
+.skills .percent_container {
+  height: 10px;
+  background-color: #f0f0f0;
+}
+
+.skills .percent {
+  background-color: var(--secondary-color);
+  height: 100%;
+}
+/* Skills section (end) */
+
+/* Interests section (start) */
+.interests ul {
+  list-style-type: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.interests i {
+  color: var(--secondary-color);
+  margin-right: 5px;
+  font-size: 18px;
+}
+/* Interests section (end) */
+/* Right side (end) */
+
+/* Responsive (start) */
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience .box {
+    flex-direction: column;
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+  }
+}
+/* Responsive (end) */
+
+/* Animation (start) */
+.about_me {
+  animation-name: aboutMe;
+  animation-duration: 4s;
+}
+
+@keyframes aboutMe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fillInOne {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%;
+  }
+}
+@keyframes fillInTwo {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes fillInThree {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes fillInFour {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 73%;
+  }
+}
+@keyframes fillInFive {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+.skill-1 .percent {
+  animation-name: fillInOne;
+  animation-duration: 3s;
+}
+
+.skill-2 .percent {
+  animation-name: fillInTwo;
+  animation-duration: 3s;
+}
+
+.skill-3 .percent {
+  animation-name: fillInThree;
+  animation-duration: 3s;
+}
+
+.skill-4 .percent {
+  animation-name: fillInFour;
+  animation-duration: 3s;
+}
+
+.skill-5 .percent {
+  animation-name: fillInFive;
+  animation-duration: 3s;
+}
